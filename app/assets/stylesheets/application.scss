@@ -15,10 +15,32 @@
  */
 @import "materialize";
 
-body {
-    background: beige;
-}
 
+.banner {
+  background: url('http://i.imgur.com/Ze9wqnM.jpg') no-repeat;
+  background-position:center;
+  background-size:cover;
+  min-height:70vh;
+  margin-top:-80px;
+  width:100vw;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-1;
+  color:#703034;
+  text-align: center;
+  // margin-left:-300px;
+}
+.banner-text{
+  margin-top:250px;
+}
+.collection{
+  margin-top:70vh;
+}
+.access-links{
+  position:absolute;
+  right:20px;
+}
 .row {
     display: flex;
     align-content: space-between !important;
@@ -33,9 +55,14 @@ body {
   display:flex;
   align-items: baseline;
 }
+nav{
+  background: transparent;
+  box-shadow: none;
 
+}
 .nav-wrapper {
     width: 100%;
+    background: none !important;
 }
 
 .inline{
@@ -222,4 +249,10 @@ html {
 
 .charges-new-info {
     margin-bottom: 20px;
+}
+@media(max-height:700px){
+
+  .banner-text{
+    margin-top:150px;
+  }
 }
