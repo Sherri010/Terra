@@ -4,7 +4,7 @@
       <div id="header">
         <% unless user_signed_in?%>
         <ul class="access-links ">
-        <li>  <span><%= link_to "Log In", new_user_session_path %></span></li>
+          <li><span><%= link_to "Log In", new_user_session_path %></span></li>
           <li><span><%= link_to "Sign up", new_user_registration_path %></span></li>
         </ul>
         <% end %>
