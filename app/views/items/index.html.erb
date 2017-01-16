@@ -9,7 +9,7 @@
   <% counter = 0 %>
     <% @items.each do |item| %>
     <% if item.stock %>
-    <div class="item-box col s12 m5" id=<%= "item#{item.id}" %>>
+    <div class="item-box col s12 m4" id=<%= "item#{item.id}" %>>
         <div class="">
           <%= image_tag item.web_image, class: "responsive-img activator card-img" %>
         </div>

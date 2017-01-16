@@ -42,6 +42,7 @@ a.icon{
 .banner-text{
   margin-left:100px;
   margin-top:250px;
+  float:left;
 }
 .banner-text h1 {
   font-size: 130px;
@@ -199,11 +200,14 @@ html {
     height: 20px;
     margin-bottom: 2px;
 }
-@media (min-width: 700px) {
+@media (max-width: 700px) {
     .card-box {
         width: 40%;
         display: inline-block;
         margin: 20px;
+    }
+    .username{
+      display: none;
     }
 }
 
@@ -293,6 +297,9 @@ html {
 
 .main-container {
     min-height: 100%;
+    width:90%;
+    margin:0 auto;
+    text-align: center;
 }
 
 .bumper {
@@ -311,4 +318,5 @@ html {
   .banner-text{
     margin-top:150px;
   }
+
 }
