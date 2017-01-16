@@ -62,11 +62,16 @@
   display:flex;
   align-items: baseline;
 }
-nav{
+
+nav {
   background: #703034;
   box-shadow: none;
-
 }
+
+h5 {
+  font-family: 'Acme', sans-serif;
+}
+
 .nav-wrapper {
     width: 100%;
     background: none !important;
@@ -232,6 +237,28 @@ html {
 
 .item-show-row {
     min-height: 350px;
+    margin-top: 40px;
+}
+
+.item-show-btn {
+  background: #86DDB3;
+  width: 120px;
+  margin-left: 20px;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  padding: 0 10px 0 10px;
+}
+
+#new_order_item {
+  display: inline-block;
+}
+
+.item-show-btn:hover {
+  background: #F8E8A3;
+}
+
+.item-price p {
+  display: inline-block;
 }
 
 .cart-icon {
