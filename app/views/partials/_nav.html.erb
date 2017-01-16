@@ -11,8 +11,9 @@
         <% end %>
 
         <% if user_signed_in? %>
-          <span>Hi <%= current_user.first_name %> </span>
+
           <ul class="access-links ">
+            <li><span class="username">Hi <%= current_user.first_name %>! </span></li>
             <li><span><%= link_to "Profile", user_path(current_user) %></span></li>
             <li><span><%= link_to "Log Out", destroy_user_session_path, method: :delete %></span></li>
           </ul>

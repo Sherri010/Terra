@@ -48,6 +48,7 @@ a.icon{
 }
 .collection{
   margin-top:80vh;
+  border:none;
 }
 .access-links{
   position:absolute;
@@ -59,7 +60,16 @@ a.icon{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.item-box{
+  margin-top:50px;
+}
+.username{
+  padding:0px 20px;
+  color:#E07761;
+}
+.instock{
+  padding-left:170px;
+}
 .row:after{
   content: none !important;
 }
@@ -76,7 +86,12 @@ nav {
 h5 {
   font-family: 'Acme', sans-serif;
 }
-
+.notice{
+  color:#F8E8A3;
+}
+.alert{
+  color:#E07761;
+}
 .nav-wrapper {
     width: 100%;
     background: none !important;
@@ -92,11 +107,9 @@ h5 {
     margin: 0 auto;
     object-fit: contain;
 }
-
-.card {
-    margin: 2vh 0 !important;
+.item-name-index{
+  color:#703034;
 }
-
 .brand-logo {
     margin-left: 10px;
 }
