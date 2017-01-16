@@ -1,7 +1,7 @@
 <div class="row item-show-row">
 	<div class="col m5">
 		<div class="item-image">
-			<%= image_tag @item.image.url(:medium), class: 'responsive-img' %>
+			<%= image_tag @item.web_image, class: 'responsive-img' %>
 		</div>
 		<div class="item-price">
 			<p><strong>Price: </strong> <%= number_to_currency(@item.price) %></p>
@@ -28,7 +28,7 @@
 	<% @suggestions.each do |suggestion| %>
 		<div class="col m2">
 			<%= link_to item_path(suggestion) do %>
-			  <%= image_tag suggestion.image.url(:medium), class: 'responsive-img' %>
+			  <%= image_tag suggestion.web_image, class: 'responsive-img' %>
 			<% end %>
 			<p><%= link_to suggestion.name, item_path(suggestion) %></p>
 		</div>
