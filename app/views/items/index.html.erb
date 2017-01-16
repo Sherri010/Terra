@@ -8,29 +8,29 @@
 <div class="row collection">
   <% counter = 0 %>
     <% @items.each do |item| %>
-<% if item.stock %>
-    <div class="card col s12 m5" id=<%= "item#{item.id}" %>>
-        <div class="card-image waves-effect waves-block waves-light">
+    <% if item.stock %>
+    <div class="item-box col s12 m5" id=<%= "item#{item.id}" %>>
+        <div class="">
           <%= image_tag item.web_image, class: "responsive-img activator card-img" %>
         </div>
-        <div class="card-content">
-            <span class=" activator grey-text text-darken-4"><h5><%= item.name %></h5></span>
+        <div class="item-content">
+            <h5 class="item-name-index"><%= item.name %></h5>
+           <p>  <%= link_to 'View Item', item %> </p>
             <span> <%= number_to_currency item.price %> each</span>
-            <span class = "grey-text right"><p class="inline"><%=item.stock %> available</p></span>
+            <p class="inline grey-text instock"><%=item.stock %> available</p>
             <div>
-
                 <%= form_for OrderItem.new, url: order_items_path do |f| %>
                 <%= f.hidden_field :item, :value => item.id %>
                 <div class = "purchase-container"><%= f.number_field :quantity, min: 1, placeholder:'amount', class:'purchase-amount'%>
-                <%= f.submit 'Add to Cart', class: 'btn'%></div>
+                <%= f.submit 'Add to Cart', class: 'btn item-show-btn'%></div>
                 <% end %>
             </div>
         </div>
-        <div class="card-reveal">
+        <!-- <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><%= item.name %><i class="material-icons right">close</i></span>
             <%= link_to 'View Item', item %>
             <p><%= item.description %></p>
-        </div>
+        </div> -->
     </div>
 
   <% end %>
