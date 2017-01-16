@@ -5,13 +5,12 @@
 		</div>
 		<div class="item-price">
 			<p><strong>Price: </strong> <%= number_to_currency(@item.price) %></p>
+			<span><%= form_for OrderItem.new, url: order_items_path do |f| %>
+			      <%= f.hidden_field :item, :value => @item.id %>
+			      <%= f.submit 'Add to Cart', class: 'btn item-show-btn' %>
+			<% end  %>
+			</span>
 		</div>
-		<span><%= form_for OrderItem.new, url: order_items_path do |f| %>
-		<span><%= link_to 'Back', root_path, class: 'btn item-show-btn' %></span>
-		      <%= f.hidden_field :item, :value => @item.id %>
-		      <%= f.submit 'Add to Cart', class: 'btn item-show-btn' %>
-		<% end  %>
-		</span>
 	</div>
 	<div class="col m7">
 		<h5 class="item-name">
@@ -22,7 +21,6 @@
 
 	</div>
 </div>
-<div class='bumper'> </div>
 
 <h5>Other Selections: </h5>
 <hr>
