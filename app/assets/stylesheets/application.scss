@@ -63,6 +63,18 @@ a.icon{
 .item-box{
   margin-top:50px;
 }
+
+.item-image {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.item-image img {
+  max-height: 250px;  
+  max-width: 250px;
+}
+
 .username{
   padding:0px 20px;
   color:#E07761;
@@ -253,8 +265,12 @@ html {
     margin-bottom: 0;
 }
 
+.item-description {
+  min-height: 100px;
+}
+
 .item-show-row {
-    min-height: 350px;
+    min-height: 300px;
     margin-top: 40px;
 }
 
@@ -267,12 +283,20 @@ html {
   padding: 0 10px 0 10px;
 }
 
+.suggestion-div {
+  margin-left: 0 !important;
+}
+
 #new_order_item {
   display: inline-block;
 }
 
 .item-show-btn:hover {
   background: #F8E8A3;
+}
+
+.item-price {
+  width: 100%;
 }
 
 .item-price p {

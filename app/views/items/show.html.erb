@@ -3,6 +3,14 @@
 		<div class="item-image">
 			<%= image_tag @item.web_image, class: 'responsive-img' %>
 		</div>
+	</div>
+	<div class="col m7">
+		<h5 class="item-name">
+			<%= @item.name %>
+		</h5>
+		<h6 class="stock-remaining <%= @item.stock >= 5 ? 'grey-text' : 'red-text' %>"><%= @item.stock %> remaining</h6>
+		<p class="item-description"><%= @item.description %></p>
+
 		<div class="item-price">
 			<p><strong>Price: </strong> <%= number_to_currency(@item.price) %></p>
 			<span><%= form_for OrderItem.new, url: order_items_path do |f| %>
@@ -12,21 +20,14 @@
 			</span>
 		</div>
 	</div>
-	<div class="col m7">
-		<h5 class="item-name">
-			<%= @item.name %>
-		</h5>
-		<h6 class="stock-remaining <%= @item.stock >= 5 ? 'grey-text' : 'red-text' %>"><%= @item.stock %> remaining</h6>
-		<p><%= @item.description %></p>
-
-	</div>
 </div>
 
 <h5>Other Selections: </h5>
 <hr>
+<br>
 <div class="row align-bottom">
 	<% @suggestions.each do |suggestion| %>
-		<div class="col m2">
+		<div class="col m2 suggestion-div">
 			<%= link_to item_path(suggestion) do %>
 			  <%= image_tag suggestion.web_image, class: 'responsive-img' %>
 			<% end %>
