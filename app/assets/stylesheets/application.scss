@@ -15,10 +15,39 @@
  */
 @import "materialize";
 
-body {
-    background: beige;
-}
 
+.banner {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), url('http://i.imgur.com/WSQsbrf.jpg') no-repeat;
+  background-position:bottom;
+  background-size:100% auto;
+  min-height:80vh;
+  width:100vw;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-1;
+  color:#fff;
+  font-family: 'Acme', sans-serif;
+
+  // margin-left:-300px;
+}
+.banner-text{
+  margin-left:100px;
+  margin-top:250px;
+}
+.banner-text h1 {
+  font-size: 130px;
+}
+.collection{
+  margin-top:80vh;
+}
+.access-links{
+  position:absolute;
+  right:20px;
+}
 .row {
     display: flex;
     align-content: space-between !important;
@@ -33,9 +62,14 @@ body {
   display:flex;
   align-items: baseline;
 }
+nav{
+  background: #703034;
+  box-shadow: none;
 
+}
 .nav-wrapper {
     width: 100%;
+    background: none !important;
 }
 
 .inline{
@@ -183,6 +217,9 @@ html {
     width: 100%;
     height: 100px;
     line-height: 100px;
+    text-align: center;
+    color:#fff;
+    background: #703034;
 }
 
 .stock-remaining {
@@ -202,6 +239,7 @@ html {
     background: white;
     border-radius: 50%;
     padding: 10px;
+    color:#E07761;
 }
 
 .footer-link {
@@ -222,4 +260,10 @@ html {
 
 .charges-new-info {
     margin-bottom: 20px;
+}
+@media(max-height:700px){
+
+  .banner-text{
+    margin-top:150px;
+  }
 }

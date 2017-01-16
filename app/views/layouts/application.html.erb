@@ -4,7 +4,7 @@
         <title>Stork</title>
         <%= csrf_meta_tags %>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
@@ -14,16 +14,14 @@
             <p class="notice"><%= notice.html_safe unless notice.blank? %></p>
             <p class="alert"><%= alert.html_safe unless alert.blank? %></p>
             <%= link_to order_items_path do %>
-            <i class="material-icons medium shopping-cart cart-icon light-blue-text text-darken-2">shopping_cart</i>
+            <i class="material-icons medium shopping-cart cart-icon ">shopping_cart</i>
             <% end  %>
             <%= yield %>
         </div>
         <!-- FOOTER -->
-        <div class="page-footer stork-footer light-blue">
+        <div class="page-footer stork-footer">
           <div class="footer-copyright">
-            <div class="container">
-            <a class="grey-text text-lighten-4 left footer-link" href="/about">About</a>
-            </div>
+            <p> &copy 2017 - Terra </p>
           </div>
         </div>
     </body>
