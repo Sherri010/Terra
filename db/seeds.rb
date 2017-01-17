@@ -5,11 +5,11 @@ Item.destroy_all
 
 items = [
   {
-    name: "Pink Ceramic Pot",
-    description: 'Nice and wide, this pot if great as decoration or for wide spreading plants. Sure to improve the mood in any room.',
-    price: 28.99,
-    stock: 10,
-    web_image: 'http://i.imgur.com/Y115WC8.jpg'
+    name: "Classic Pot",
+    description: 'You get with you see. A classic take on the ceramic pot, this item is basic but reliable. Every household needs a few of these.',
+    price: 14.99,
+    stock: 25,
+    web_image: 'http://i.imgur.com/SCzbxBd.png'
   },
   {
     name: "Hedgehog Centerpiece",
@@ -17,6 +17,13 @@ items = [
     price: 24.99,
     stock: 18,
     web_image: 'http://i.imgur.com/IkEKt3Z.png'
+  },
+  {
+    name: "Pink Ceramic Pot",
+    description: 'Nice and wide, this pot if great as decoration or for wide spreading plants. Sure to improve the mood in any room.',
+    price: 28.99,
+    stock: 10,
+    web_image: 'http://i.imgur.com/Y115WC8.jpg'
   },
   {
     name: "Narrow Bottom Bronze Pot",
@@ -27,7 +34,7 @@ items = [
   },
   {
     name: "Ceramic Seashell Bowl",
-    description: 'This shell bowl is attractive and perfect as a stand-alone centerpiece, or for displaying other collectables. Can also be used as a serving vessel. Measures 11-1/2-inch length by 7-1/2-inch width by 4-3/4-inch height',
+    description: 'This shell bowl is attractive and perfect as a stand-alone centerpiece, or for displaying other collectables. Can also be used as a serving vessel. Measures 11-1/2-inch length by 7-1/2-inch width by 4-3/4-inch height.',
     price: 39.99,
     stock: 8,
     web_image: 'http://i.imgur.com/vMeodCj.png'
@@ -61,6 +68,13 @@ items = [
     web_image: 'http://i.imgur.com/a20KA4I.png'
   },
   {
+    name: "Fish Punch Bowl",
+    description: 'What a unique way to serve punch! After your guests get served their favorite drinks from this bowl, they will always bring it up at house parties.',
+    price: 29.99,
+    stock: 15,
+    web_image: 'http://i.imgur.com/H9bdN9M.png'
+  },
+  {
     name: "Cactus Centerpiece",
     description: 'Why get a ceramic pot for a cactus, when you can just get a ceramic cactus? This has the beauty and vibrance of a real cactus, but without the fuss or needles!',
     price: 19.99,
@@ -68,15 +82,12 @@ items = [
     web_image: 'http://i.imgur.com/bZ7OqTT.png'
   },
   {
-    name: "Fish Punch Bowl",
-    description: 'What a unique way to serve punch! After your guests get served their favorite drinks from this bowl, they will always bring it up at house parties.',
-    price: 29.99,
-    stock: 15,
-    web_image: 'http://i.imgur.com/H9bdN9M.png'
+    name: "Old-Time Ceramic Watering Jug",
+    description: 'This lovely piece of art will inspire you to water you plants every chance you get! Though it should be used with care, this jug will prove its worth with its beauty and style.',
+    price: 39.99,
+    stock: 5,
+    web_image: 'http://i.imgur.com/BHNNXYs.gif'
   }
-
-
-
 
   # {
   #   name: "Hershey's Chocolate Bar",
@@ -272,6 +283,6 @@ end
 end
 
 100.times do
-  OrderItem.create(order_id: rand(1..20), item_id: rand(1..10), quantity: rand(1..5))
+  OrderItem.create(order_id: rand(1..20), item_id: rand(1..12), quantity: rand(1..5))
 end
 # Order.all.each(&:handle_payment)
