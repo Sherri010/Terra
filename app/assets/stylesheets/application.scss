@@ -50,6 +50,7 @@ a.icon{
 .collection{
   margin-top:80vh;
   border:none;
+  text-align: center;
 }
 .access-links{
   position:absolute;
@@ -80,9 +81,7 @@ a.icon{
   padding:0px 20px;
   color:#E07761;
 }
-.instock{
-  padding-left:170px;
-}
+
 .row:after{
   content: none !important;
 }
@@ -91,8 +90,9 @@ a.icon{
   align-items: baseline;
 }
 .price-count{
-  width:300px;
   margin:0 auto;
+  text-align: left;
+  width:200px;
 }
 nav {
   background: #703034;
@@ -224,6 +224,17 @@ html {
     .username{
       display: none;
     }
+    .instock{
+      display: none;
+    }
+    .item-name-index{
+      font-size:18px
+    }
+    .price-count{
+
+      width:auto;
+    }
+
 }
 
 .header-input {
@@ -326,7 +337,6 @@ html {
     min-height: 100%;
     width:90%;
     margin:0 auto;
-    text-align: center;
 }
 
 .bumper {
@@ -341,7 +351,6 @@ html {
     margin-bottom: 20px;
 }
 @media(max-height:700px){
-
   .banner-text{
     margin-top:150px;
   }

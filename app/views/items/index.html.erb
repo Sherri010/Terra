@@ -17,14 +17,15 @@
             <h5 class="item-name-index"><%= item.name %></h5>
             <p>  <%= link_to 'View Item', item %> </p>
           <div class="price-count">
-            <p class="left"> <%= number_to_currency item.price %> each</p>
-            <p class="inline grey-text right"><%=item.stock %> available</p>
+            <p class=""> <%= number_to_currency item.price %> each <span class="inline grey-text right instock"><%=item.stock %> available</span></p>
           </div>
             <div>
                 <%= form_for OrderItem.new, url: order_items_path do |f| %>
                 <%= f.hidden_field :item, :value => item.id %>
-                <div class = "purchase-container"><%= f.number_field :quantity, min: 1, placeholder:'amount', class:'purchase-amount'%>
-                <%= f.submit  'buy',class: 'btn item-show-btn'%></div>
+                <div class = "purchase-container">
+                 <%= f.number_field :quantity, min: 1, placeholder:'amount', class:'purchase-amount'%>
+                 <%= f.submit  'buy',class: 'btn item-show-btn'%>
+               </div>
                 <% end %>
             </div>
         </div>

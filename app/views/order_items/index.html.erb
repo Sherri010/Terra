@@ -29,7 +29,11 @@
       <tr>
         <td>Total:</td>
         <td>
+        <% if current_user %>
           <%= number_to_currency(Order.current(session[:user_id], current_user).order_total) %>
+        <% else %>
+          <p> You need to loging for more information </p>
+       <% end %>
         </td>
       </tr>
     </tfoot>
