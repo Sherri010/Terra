@@ -371,3 +371,17 @@ html {
   }
 
 }
+
+@media(max-width:500px){
+  .banner-text{
+    margin-left:50px;
+    margin-top:200px;
+    float:left;
+  }
+  .banner-text h1{
+    font-size: 40px;
+  }
+  .banner-text h4{
+    font-size: 20px;
+  }
+}
