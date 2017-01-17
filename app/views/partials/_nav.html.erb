@@ -1,28 +1,32 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <nav>
     <div class="nav-wrapper">
-        <a href="/" class="brand-logo icon">Terra</a>
-      <div id="header">
+          <a href="/" class="brand-logo icon">Terra</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul  class="right hide-on-med-and-down access-links">
+      <% unless user_signed_in?%>
+        <li><span><%= link_to "Log In", new_user_session_path %></span></li>
+        <li><span><%= link_to "Sign up", new_user_registration_path %></span></li>
+      <% end %>
+
+      <% if user_signed_in? %>
+          <li><span class="username">Hi <%= current_user.first_name %>! </span></li>
+          <li><span><%= link_to "Profile", user_path(current_user) %></span></li>
+          <li><span><%= link_to "Log Out", destroy_user_session_path, method: :delete %></span></li>
+
+      <% end %>
+          </ul>
+      <ul class="side-nav " id="mobile-demo">
         <% unless user_signed_in?%>
-        <ul class="access-links ">
           <li><span><%= link_to "Log In", new_user_session_path %></span></li>
           <li><span><%= link_to "Sign up", new_user_registration_path %></span></li>
-        </ul>
         <% end %>
 
         <% if user_signed_in? %>
-
-          <ul class="access-links ">
             <li><span class="username">Hi <%= current_user.first_name %>! </span></li>
             <li><span><%= link_to "Profile", user_path(current_user) %></span></li>
             <li><span><%= link_to "Log Out", destroy_user_session_path, method: :delete %></span></li>
-          </ul>
         <% end %>
+      </ul>
     </div>
-  </div>
-</nav>
-
-<!-- need to create the form in the nav bar
-
-	add footer
- -->
+  </nav>

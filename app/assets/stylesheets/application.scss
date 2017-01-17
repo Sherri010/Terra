@@ -56,6 +56,16 @@ a.icon{
   position:absolute;
   right:20px;
 }
+.container2{
+  width:300px;
+  margin:0 auto;
+}
+.container2 h2 {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  color:#703034;
+}
+
 .row {
     display: flex;
     align-content: space-between !important;
@@ -235,6 +245,9 @@ html {
       width:auto;
     }
 
+   a.brand-logo{
+      text-align: left;
+   }
 }
 
 .header-input {
@@ -300,7 +313,9 @@ html {
   font-family: 'Acme', sans-serif;
   padding: 0 10px 0 10px;
 }
-
+.actions{
+  margin: 30px 100px;
+}
 .suggestion-div {
   margin-left: 0 !important;
 }
