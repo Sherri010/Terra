@@ -47,9 +47,15 @@ a.icon{
 .banner-text h1 {
   font-size: 130px;
 }
+
+.collection-header {
+  margin-top:75vh;
+  margin-bottom: 0;
+}
+
 .collection{
-  margin-top:80vh;
   border:none;
+  margin-top: 0;
   text-align: center;
 }
 .access-links{
