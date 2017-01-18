@@ -42,6 +42,7 @@ a.icon{
 .banner-text{
   margin-left:100px;
   margin-top:250px;
+  float:left;
 }
 .banner-text h1 {
   font-size: 130px;
@@ -49,11 +50,22 @@ a.icon{
 .collection{
   margin-top:80vh;
   border:none;
+  text-align: center;
 }
 .access-links{
   position:absolute;
   right:20px;
 }
+.container2{
+  width:300px;
+  margin:0 auto;
+}
+.container2 h2 {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  color:#703034;
+}
+
 .row {
     display: flex;
     align-content: space-between !important;
@@ -71,7 +83,7 @@ a.icon{
 }
 
 .item-image img {
-  max-height: 250px;  
+  max-height: 250px;
   max-width: 250px;
 }
 
@@ -79,9 +91,7 @@ a.icon{
   padding:0px 20px;
   color:#E07761;
 }
-.instock{
-  padding-left:170px;
-}
+
 .row:after{
   content: none !important;
 }
@@ -89,7 +99,11 @@ a.icon{
   display:flex;
   align-items: baseline;
 }
-
+.price-count{
+  margin:0 auto;
+  text-align: left;
+  width:200px;
+}
 nav {
   background: #703034;
   box-shadow: none;
@@ -211,12 +225,29 @@ html {
     height: 20px;
     margin-bottom: 2px;
 }
-@media (min-width: 700px) {
+@media (max-width: 700px) {
     .card-box {
         width: 40%;
         display: inline-block;
         margin: 20px;
     }
+    .username{
+      display: none;
+    }
+    .instock{
+      display: none;
+    }
+    .item-name-index{
+      font-size:18px
+    }
+    .price-count{
+
+      width:auto;
+    }
+
+   a.brand-logo{
+      text-align: left;
+   }
 }
 
 .header-input {
@@ -228,7 +259,12 @@ html {
     display: flex;
     justify-content: space-around;
 }
-
+.info{
+  padding-left:20px;
+}
+.back-to{
+  margin-top:180px;
+}
 .logo {
     height: 100px;
     margin-top: -20px;
@@ -282,7 +318,9 @@ html {
   font-family: 'Acme', sans-serif;
   padding: 0 10px 0 10px;
 }
-
+.actions{
+  margin: 30px 100px;
+}
 .suggestion-div {
   margin-left: 0 !important;
 }
@@ -317,6 +355,8 @@ html {
 
 .main-container {
     min-height: 100%;
+    width:90%;
+    margin:0 auto;
 }
 
 .bumper {
@@ -331,8 +371,22 @@ html {
     margin-bottom: 20px;
 }
 @media(max-height:700px){
-
   .banner-text{
     margin-top:150px;
+  }
+
+}
+
+@media(max-width:500px){
+  .banner-text{
+    margin-left:50px;
+    margin-top:200px;
+    float:left;
+  }
+  .banner-text h1{
+    font-size: 40px;
+  }
+  .banner-text h4{
+    font-size: 20px;
   }
 }
