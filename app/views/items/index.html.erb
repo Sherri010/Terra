@@ -5,6 +5,8 @@
     <h4> Essence of nature for your home</h4>
   </div>
 </div>
+
+<h5 class="row collection-header">Explore Our Collection of Nature-Themed Ceramic Decor</h5>
 <div class="row collection">
   <% counter = 0 %>
     <% @items.each do |item| %>
@@ -23,15 +25,15 @@
                 <%= form_for OrderItem.new, url: order_items_path do |f| %>
                 <%= f.hidden_field :item, :value => item.id %>
                 <div class = "purchase-container">
-                 <%= f.number_field :quantity, min: 1, placeholder:'amount', class:'purchase-amount'%>
-                 <%= f.submit  'buy',class: 'btn item-show-btn'%>
+                 <%#= f.number_field :quantity, min: 1, placeholder:'amount', class:'purchase-amount'%>
+                 <%= f.submit  'Add to Cart',class: 'btn item-show-btn'%>
                </div>
                 <% end %>
             </div>
         </div>
         <!-- <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><%= item.name %><i class="material-icons right">close</i></span>
-            <%= link_to 'View Item', item %>
+            <%#= link_to 'View Item', item %>
             <p><%= item.description %></p>
         </div> -->
     </div>
